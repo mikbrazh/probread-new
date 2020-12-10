@@ -68,4 +68,30 @@
   width: 10px
   height: 10px
   border-radius: 50%
+
+.offer__price
+  position: absolute
+  top: 300px
+  left: 300px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  width: em(55px)
+  height: em(30px)
+  padding-left: em(5px)
+  font-family: $text
+  font-size: rem(16px)
+  color: white
+  border: 1px solid #cbc6b4
+  background-color: rgba(0, 0, 0, 0.3)
+  &:after
+    position: absolute
+    top: em(7px)
+    left: em(33px)
+    width: 15px
+    height: 15px
+    background-image: url('../img/svg/ruble-currency-sign.svg')
+    background-size: cover
+    background-repeat: no-repeat
+    content: ''
 // END MAIN
