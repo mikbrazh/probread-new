@@ -1,0 +1,87 @@
+// BEGIN HEADER
+.header
+  height: 120px
+  background-color: $bg-dark
+
+.logo-wrap
+  position: relative
+
+.logo--header
+  position: absolute
+  top: -25px
+  left: 15px
+  display: block
+  width: 120px
+  height: 154px
+  background-image: url('../img/@2x/logo--main@2x.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)
+  transition: $href-transition
+  &:hover
+    top: 0
+
+.nav--header
+  display: flex
+  align-items: center
+  height: 120px
+
+.nav__item--header
+  position: relative
+  margin-right: em(50px)
+  font-family: $title
+  font-size: rem(12px)
+  color: white
+  &:last-child
+    margin-right: 0
+  &:hover
+    color: $href-hover
+  &:before
+    position: absolute
+    top: 0
+    left: em(-25px)
+    width: 15px
+    height: 100%
+    background-image: url('../img/@2x/nav-arrow_sprite@2x.png')
+    background-repeat: no-repeat
+    background-position: 0 0
+    content: ''
+  &:hover:before
+    background-position: -15px 0
+
+.tel-wrap
+  display: flex
+  flex-direction: column
+  justify-content: center
+  height: 120px
+
+.tel-desc
+  font-family: $text
+  font-size: rem(12px)
+  color: $href-hover
+
+.tel--header
+  position: relative
+  display: inline-block
+  font-family: $default
+  font-weight: bold
+  font-size: rem(22px)
+  letter-spacing: em(0.5px)
+  color: white
+  &:hover
+    color: white
+  &:before
+    position: absolute
+    top: em(2px)
+    left: em(-15px)
+    font-family: 'fontAwesome'
+    color: $href-hover
+    content: '\f095'
+    pointer-events: none
+    cursor: auto
+
+.tel--sm
+  font-size: rem(14px)
+
+
+// END HEADER
