@@ -74,17 +74,18 @@
   align-content: space-between
 
 .cards__item
-  display: flex
-  justify-content: center
-  margin: 0 15px 0 15px
+  position: relative
   width: 30%
-  height: 500px
-  // background-color: #c0c0c0
+  margin: 0 15px 0 15px
+  padding-top: 340px
 
 .cards__item-circle
-  position: relative
+  position: absolute
+  top: 0
+  left: 50%
   width: 300px
   height: 300px
+  transform: translateX(-50%)
   border-radius: 50%
   background-color: white
   box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1)
@@ -140,4 +141,87 @@
   left: 50%
   transform: translateX(-50%)
 
+.cards__item-text
+  text-align: center
+
+.cards__item-title
+  margin-bottom: em(30px)
+  font-family: $title
+  font-size: rem(18px)
+
+.cards__item-desc
+  display: block
+  margin-bottom: em(20px)
+  font-family: $text
+  font-size: rem(16px)
+
+.cards__item-ingredient
+  display: block
+  padding-bottom: em(60px)
+  font-family: $text
+  font-size: rem(16px)
+
+.cards__item-ingredient--underline
+  position: relative
+  &::before
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 1px
+    background-color: #282828
+    content: ''
+
+.cards__item-price
+  position: relative
+  display: inline-block
+  // width: em(50px)
+  // height: em(20px)
+  margin: 0 auto 10px
+  padding-right: 28px
+  font-family: $title
+  font-size: rem(48px)
+  &::after
+    position: absolute
+    top: em(5px)
+    right: em(-5px)
+    width: 40px
+    height: 40px
+    background-image: url('../img/svg/ruble-currency-sign-black.svg')
+    background-size: cover
+    content: ''
+
+.cards__item-btn
+  position: relative
+  display: block
+  width: em(165px)
+  height: em(45px)
+  margin: 0 auto
+  padding-left: 30px
+  font-family: $title
+  font-size: rem(18px)
+  color: white
+  background-color: $accent
+  border: 2px solid $accent
+  border-radius: 50px
+  transition: $href-transition
+  &:hover
+    color: #282828
+    background-color: transparent
+    cursor: pointer
+  &:focus
+    outline: none
+  &::before
+    position: absolute
+    top: 50%
+    left: em(30px)
+    width: 23px
+    height: 23px
+    background-image: url('../img/svg/check.svg')
+    background-size: cover
+    transform: translateY(-50%)
+    transition: $href-transition
+    content: ''
+  &:hover:before
+    background-image: url('../img/svg/check-black.svg')
 // END SECTION-1
