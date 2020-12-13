@@ -9,6 +9,7 @@
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1)
 
 .title
+  margin-bottom: em(40px)
   font-family: $title
   font-size: rem(30px)
   text-align: center
@@ -16,7 +17,7 @@
 .title--sec-1
   position: relative
   display: inline-block
-  &:after
+  &::after
     position: absolute
     left: -20px
     bottom: em(-5px)
@@ -39,7 +40,7 @@
   left: 0
   &:hover
     cursor: pointer
-  &:before
+  &::before
     position: absolute
     top: 50%
     left: 50%
@@ -57,7 +58,7 @@
   right: 0
   &:hover
     cursor: pointer
-  &:before
+  &::before
     position: absolute
     top: 50%
     left: 50%
@@ -73,9 +74,70 @@
   align-content: space-between
 
 .cards__item
-  margin: 15px 15px 0 15px
-  background-color: #c0c0c0
+  display: flex
+  justify-content: center
+  margin: 0 15px 0 15px
   width: 30%
+  height: 500px
+  // background-color: #c0c0c0
+
+.cards__item-circle
+  position: relative
+  width: 300px
   height: 300px
+  border-radius: 50%
+  background-color: white
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1)
+  &::before
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    height: 0
+    border: 150px solid transparent
+    border-top: 150px solid #f2f2f2
+    border-radius: 50%
+    transform: rotate(225deg)
+    content: ''
+  &::after
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    height: 0
+    border: 150px solid transparent
+    border-top: 150px solid #e5d2b8
+    border-radius: 50%
+    transform: rotate(135deg)
+    content: ''
+
+.cards__item-weight
+  position: absolute
+  bottom: 70px
+  z-index: 1
+  font-family: $title
+  font-size: 24px
+
+.cards__item-weight--left
+  left: 40px
+
+.cards__item-weight--right
+  right: 40px
+
+.cards__item-line
+  position: absolute
+  bottom: 0
+  z-index: 1
+  left: 50%
+  width: 3px
+  height: 50%
+  background-color: white
+  transform: translateX(-50%)
+
+.cards__item-img
+  position: absolute
+  top: 30px
+  left: 50%
+  transform: translateX(-50%)
 
 // END SECTION-1
