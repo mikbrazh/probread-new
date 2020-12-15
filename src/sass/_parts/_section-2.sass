@@ -1,3 +1,37 @@
 // BEGIN SECTION-2
+.sec-2
+  height: 650px
+  background-image: url('../img/@2x/bg--sec-2@2x.jpg')
+  background-size: cover
+  background-repeat: no-repeat
 
+.title--sec-2
+  margin-bottom: em(50px)
+  font-family: $title
+  font-size: rem(24px)
+  text-align: center
+
+.sec-2-text
+  position: relative
+  padding-left: 50px
+  font-family: $text
+  font-size: rem(15px)
+  &::before
+    position: absolute
+    left: em(40px)
+    bottom: 0
+    width: 1px
+    height: 95%
+    background-color: grey
+    content: ''
+
+.sec-2-text__par--art
+  line-height: 1
+
+.sec-2-text--art
+  font-family: $art
+  font-size: rem(36px)
+
+.sec-2-text__par
+  margin-bottom: em(10px)
 // END SECTION-2
