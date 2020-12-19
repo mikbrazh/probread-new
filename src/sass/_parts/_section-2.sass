@@ -1,11 +1,31 @@
 // BEGIN SECTION-2
 .sec-2
-  height: 650px
-  background-image: url('../img/@2x/bg--sec-2@2x.jpg')
+  position: relative
+  height: 750px
+  background-image: url('../img/@2x/bg--sec-2@2x.png')
   background-size: cover
   background-repeat: no-repeat
+  &::before
+    position: absolute
+    width: 495px
+    height: 548px
+    left: 180px
+    bottom: 0
+    background-image: url('../img/@2x/baker--sec-2@2x.png')
+    background-size: cover
+    content: ''
+  &::after
+    position: absolute
+    right: 100px
+    bottom: -160px
+    width: 420px
+    height: 253px
+    background-image: url('../img/@2x/bread-basket--sec-2@2x.png')
+    background-size: cover
+    content: ''
 
 .title--sec-2
+  padding-top: em(100px)
   margin-bottom: em(50px)
   font-family: $title
   font-size: rem(24px)
@@ -34,4 +54,8 @@
 
 .sec-2-text__par
   margin-bottom: em(10px)
+
+.empty-row
+  height: 115px
+  background-color: $bg-bright
 // END SECTION-2
