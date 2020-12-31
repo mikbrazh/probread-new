@@ -49,6 +49,7 @@ gulp.task('buildvendorjs', function() {
     ''+srcFolder+'/libs/jquery/dist/jquery.min.js',
     ''+srcFolder+'/libs/bootstrap/bootstrap.min.js',
     ''+srcFolder+'/libs/lazysizes/lazy.js',
+    ''+srcFolder+'/libs/slick/slick.min.js'
     ])
   .pipe(concat('vendor.min.js'))
   .pipe(uglify()) // Закомментируйте для отключения минификации
